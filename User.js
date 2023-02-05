@@ -1,4 +1,4 @@
-const ShoppingCart = require('./ShoppingCart.js');
+import { ShoppingCart } from "./ShoppingCart.js";
 
 class User {
     #id;
@@ -7,8 +7,8 @@ class User {
     #wallet;
     constructor(idNumber, email) {
         this.shoppingCart = new ShoppingCart();
-        this.setId = idNumber;
-        this.setEmail = email;
+        this.setId(idNumber);
+        this.setEmail(email);
         this.#wallet = 10000; //just initial value
     }
 
@@ -29,4 +29,5 @@ class User {
         }
     }
 }
- module.exports = User;
+
+export { User };
