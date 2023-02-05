@@ -3,9 +3,9 @@ class Product {
     #price;
     #description;
     constructor(name, price, des) {
-        this.setName = name;
-        this.setPrice = price;
-        this.addDescription = des;
+        this.setName(name);
+        this.setPrice(price);
+        this.addDescription(des);
     }
 
 
@@ -17,7 +17,7 @@ class Product {
         if (price > 0) {
             this.#price = price;
         } else {
-            throw "error: price must be >= 0";
+            throw "error: enter positive number";
         }
     }
 
@@ -30,4 +30,4 @@ class Product {
     }
 }
 
-module.exports = Product;
+export { Product };
