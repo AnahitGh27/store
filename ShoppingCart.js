@@ -1,4 +1,4 @@
-const Product = require('./Product.js');
+import { Product } from "./Product.js";
 
 class ShoppingCart {
     #products;
@@ -25,7 +25,7 @@ class ShoppingCart {
 
     getTotalPrice() {
         for (let value of this.#products.values()) {
-            this.#totalPrice += value.setPrice;
+            this.#totalPrice += value.getPrice();
         }
         return this.#totalPrice;
     }
@@ -39,4 +39,5 @@ class ShoppingCart {
     }
 }
 
-module.exports = ShoppingCart;
+
+export  { ShoppingCart };
